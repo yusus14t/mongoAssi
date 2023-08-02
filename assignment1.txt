@@ -1,0 +1,125 @@
+//create DataBase collection //
+
+db.createCollection('restaurent')
+
+//insert 1 document in restaurent collection //
+
+db.restaurent.insertOne({
+
+"address": {
+
+"building": "1007",
+
+"coord": [ -73.856077, 40.848447 ],
+
+"street": "Mall Road Mussorrie",
+
+"zipcode": "10462"
+
+},
+
+"cuisine": "Bakery",
+
+"grades": [
+
+{ "date": { "$date": 1393804800000 }, "grade": "A", "score": 2 },
+
+{ "date": { "$date": 1378857600000 }, "grade": "A", "score": 6 },
+
+{ "date": { "$date": 1358985600000 }, "grade": "A", "score": 10 },
+
+{ "date": { "$date": 1322006400000 }, "grade": "A", "score": 9 },
+
+{ "date": { "$date": 1299715200000 }, "grade": "B", "score": 14 }
+
+],
+
+"name": "Morris Bake Shop",
+
+"restaurant_id": "30075445"
+
+})
+
+
+//Insert 22 more documents in DB collection //
+
+db.restaurent.insertMany([
+
+{"address" : { "building" : "600", "coord" : [ -73.8981479482654, 40.8745128935 ], "street" : "old Street West", "zipcode" : "101025" }, "cuisine" : "Chinese", "grades" : [ { "date" : new Date("2015-08-25"), "grade" : "A", "score" : 15 }, { "date" : new Date("2014-08-07"), "grade" : "A", "score" : 90 }, { "date" : new Date("2013-06-31"), "grade" : "A", "score" : 15 }, { "date" : new Date("2014-10-25"), "grade" : "A", "score" : 95 } ], "name" : "chi Foods & Restaurant", "restaurant_id" : "34789586" },
+
+{"address" : { "building" : "1007", "coord" : [ -73.8658245, 40.848447 ], "street" :"Mall Road Mussorrie", "zipcode" : "10462" }, "cuisine" : "Bakery", "grades" : [ { "date" : new Date("2014-04-15"), "grade" : "B", "score" : 10 }, { "date" : new Date("2013-10-15"), "grade" : "A", "score" : 55 }, { "date" : new Date("2013-01-24"), "grade" : "A", "score" : 94 }, { "date" : new Date("2011-11-23"), "grade" : "A", "score" : 45 }, { "date" : new Date("2011-03-16"), "grade" : "B", "score" : 45 } ], "name" :  "Bakery Shop", "restaurant_id" : "30075445" },
+
+{"address" : { "building" : "901", "coord" : [ -73.987465284924, 40.579505 ], "street" : "East Mumbai", "zipcode" : "590256" }, "cuisine" : "American", "grades" : [ { "date" : new Date("2013-08-18"), "grade" : "A", "score" : 40 }, { "date" : new Date("2014-06-14"), "grade" : "A", "score" : 42 }, { "date" : new Date("2012-04-24"), "grade" : "A", "score" : 84 }, { "date" : new Date("2011-10-20"), "grade" : "A", "score" : 87 } ], "name" : "Food Club", "restaurant_id" : "46589725" },
+
+{"address" : { "building" : "501", "coord" : [ -73.966254982213, 40.2551244 ], "street" : "South Benglore", "zipcode" : "102465" }, "cuisine" : "Burgers", "grades" : [ { "date" : new Date("2015-11-12"), "grade" : "A", "score" : 18 }, { "date" : new Date("2013-11-15"), "grade" : "B", "score" : 32 }, { "date" : new Date("2014-03-24"), "grade" : "A", "score" : 9 }, { "date" : new Date("2012-06-12"), "grade" : "A", "score" : 45 } ], "name" : "Burgers Kitchen", "restaurant_id" : "4579258" },
+
+{"address" : { "building" : "705", "coord" : [ -75.0450682499975478, 40.7895412 ], "street" : "Main Road", "zipcode" : "2154875" }, "cuisine" : "Kokani Fish", "grades" : [ { "date" : new Date("2014-10-14"), "grade" : "Z", "score" : 95 }, { "date" : new Date("2015-03-15"), "grade" : "A", "score" : 85 }, { "date" : new Date("2013-09-23"), "grade" : "A", "score" : 75 }, { "date" : new Date("2012-12-02"),"grade" : "B", "score" : 80 } ], "name" : "Gold Fish Center", "restaurant_id" : "50458079" },
+
+{"address" : { "building" : "1503", "coord" : [ -73.8098542013477, 40.9874568 ], "street" : "East Goa street", "zipcode" : "201457" }, "cuisine" : "Tuna Fish", "grades" : [ { "date" : new Date("2016-12-20"), "grade" : "Z", "score" : 80 }, { "date" : new Date("2017-08-12"), "grade" : "A", "score" : 95 }, { "date" : new Date("2018-03-02"), "grade" : "A", "score" : 85 }, { "date" : new Date("2018-11-12"), "grade" : "A", "score" : 82 } ], "name" : "Cafe Tuna Fish", "restaurant_id" : "45789258" },
+
+{"address" : { "building" : "2013", "coord" : [ -74.0025487954855, 40.41785145 ], "street" : "North Chennai", "zipcode" : "524218" }, "cuisine" : "Chinese", "grades" : [ { "date" : new Date("2018-05-20"), "grade" : "A", "score" : 88 }, { "date" : new Date("2017-10-25"), "grade" : "A", "score" : 82 }, { "date" : new Date("2016-04-22"), "grade" : "A", "score" : 40 }, { "date" : new Date("2018-12-12"), "grade" : "A", "score" : 8 }, { "date" : new Date("2015-11-15"), "grade" : "A", "score" : 25 } ], "name" : "CHi Food Center", "restaurant_id" : "84672594" },
+
+{"address" : { "building" : "855", "coord" : [ -73.012457546888, 40.45125714 ], "street" : "Western Goa", "zipcode" : "2467884" }, "cuisine" : "Clod Drinks", "grades" : [ { "date" : new Date("2016-10-18"), "grade" : "A", "score" : 85 }, { "date" : new Date("2017-03-15"), "grade" : "A", "score" : 8 }, { "date" : new Date("2015-09-12"), "grade" : "A", "score" : 15 }, { "date" : new Date("2014-07-18"),"grade" : "A", "score" : 14 }, { "date" : new Date("2013-03-09"), "grade" : "B", "score" : 10 }, ], "name" : "Clod Drinks Center", "restaurant_id" : "56482972" },
+
+{"address" : { "building" : "1302", "coord" : [ -73.561246587985, 40.8847592 ], "street" : "Southern Mussorrie", "zipcode" : "104568" }, "cuisine" : "Fast Food", "grades" : [ { "date" : new Date("2016-08-15"), "grade" : "A", "score" : 8 }, { "date" : new Date("2017-05-02"), "grade" : "A", "score" : 12 }, { "date" : new Date("2018-06-15"), "grade" : "B", "score" : 5 }, { "date" : new Date("2019-09-08"), "grade" : "B", "score" : 4 } ], "name" : "Food Cafeteria", "restaurant_id": "59003589" },
+
+{"address" : { "building" : "2544", "coord" : [ -73.9315494431489, 40.6245875 ], "street" : "East Kolkata", "zipcode" : "59001254" }, "cuisine" : "Ice Cream", "grades" : [ { "date" : new Date("2018-08-12"), "grade" : "A", "score" : 45 }, { "date" : new Date("2017-08-09"), "grade" : "B", "score" : 9 }, { "date" : new Date("2016-08-23"), "grade" : "A", "score" : 30 }, { "date" : new Date("2015-05-14"), "grade" : "A", "score" : 5 } ], "name" : "Ice Cream", "restaurant_id" : "3024658" },
+
+{"address" : { "building" : "3024", "coord" : [ -75.324315695752, 40.545687921 ], "street" : "18 Sector Gurgaon", "zipcode" : "214681" }, "cuisine" : "Punjabi", "grades" : [ { "date" : new Date("2019-09-18"), "grade" : "A", "score" : 89 }, { "date" : new Date("2018-10-30"), "grade" : "A", "score" : 92 }, { "date" : new Date("2017-05-15"), "grade" : "A", "score" : 60 }, { "date" : new Date("2016-10-23"), "grade" : "A", "score" : 10} ], "name" : "Punjabi Cafe", "restaurant_id" : "60124587" },
+
+{"address" : { "building" : "2788", "coord" : [ -73.1254687954, 40.75489658 ], "street" : "East Sector 25", "zipcode" : "102154" }, "cuisine" : "Chinese", "grades" : [ { "date" : new Date("2020-01-10"), "grade" : "B", "score" : 88 }, { "date" : new Date("2019-09-12"), "grade" : "A", "score" : 35 }, { "date" : new Date("2018-08-08"), "grade" : "C", "score" : 50 }, { "date" : new Date("2017-11-16"),"grade" : "B", "score" : 40}, ], "name" : "Fire Food Center", "restaurant_id" : "145268422" },
+
+{"address" : { "building" : "100", "coord" : [ -73.89542135792, 40.897458879 ], "street" : "East 50 Sector", "zipcode" : "2134655" }, "cuisine" : "American", "grades" : [ { "date" : new Date("2019-08-24"), "grade" : "A", "score" : 9 }, { "date" : new Date("2018-07-14"), "grade" : "A", "score" : 12 }, { "date" : new Date("2017-02-16"), "grade" : "A", "score" : 8 }, { "date" : new Date("2016-10-18"), "grade" : "A", "score" : 20 } ], "name" : "Street Fire", "restaurant_id" : "5134958" },
+
+{"address" : { "building" : "1700", "coord" : [ -73.15168468465549, 40.92421858 ], "street" : "West 80 Sector", "zipcode" : "122354" }, "cuisine" : "Pizza", "grades" : [ { "date" : new Date("2018-09-10"), "grade" : "A", "score" : 42 }, { "date" : new Date("2017-08-14"), "grade" : "B", "score" : 40 }, { "date" : new Date("2015-02-25"), "grade" : "A", "score" : 12 }, { "date" : new Date("2014-01-18"), "grade" : "A", "score" : 5 }, ], "name" : "Pizza Center", "restaurant_id" : "8416795" },
+
+{"address" : { "building" : "200", "coord" : [ -73.89542789220021, 40.2104578 ], "street" : "Belgaum", "zipcode" : "590003" }, "cuisine" : "Rice pulav", "grades" : [ { "date" : new Date("2020-02-11"), "grade" : "A", "score" : 92 }, { "date" : new Date("2019-03-12"), "grade" : "A", "score" : 82 }, { "date" : new Date("2017-02-19"), "grade" : "A", "score" : 88 }, { "date" : new Date("2016-09-11"), "grade" : "B", "score" : 55 }, ], "name" : "Fire Rice", "restaurant_id" : "5123149" },
+
+{"address" : { "building" : "305", "coord" : [ -73.984589659944, 40.99745868 ], "street" : "karwar", "zipcode" : "213500" }, "cuisine" : "Dosa/Idali", "grades" : [ { "date" : new Date("2018-09-16"), "grade" : "A", "score" : 60 }, { "date" : new Date("2017-03-02"), "grade" : "B", "score" : 15 }, { "date" : new Date("2016-05-11"), "grade" : "A", "score" : 80 } ], "name" : "karwar Dosa Center", "restaurant_id" : "5132148"},
+
+{"address" : { "building" : "1000", "coord" : [ -74.124358685824, 40.11241555 ], "street" : "Mysore", "zipcode" : "021154" }, "cuisine" : "Spice Rice", "grades" : [ { "date" : new Date("2017-08-13"), "grade" : "A", "score" : 65 }, { "date" : new Date("2016-05-01"), "grade" : "A", "score" : 85 }, { "date" : new Date("2015-01-15"), "grade" : "A", "score" : 95 } ], "name" : "Spices Food", "restaurant_id" : "54236489" },
+
+{"address" : { "building" : "1100", "coord" : [ -73.41325438455, 40.4125648 ], "street" :  "Green Garden Sector", "zipcode" : "1243585" }, "cuisine" : "Green Chicken", "grades" : [ { "date" : new Date("2019-11-12"), "grade" : "A", "score" : 80 }, { "date" : new Date("2018-06-04"), "grade" : "A", "score" : 84 }, { "date" : new Date("2017-02-05"), "grade" : "A", "score" : 90 }, { "date" : new Date("2016-08-04"), "grade" : "B", "score" : 9 } ], "name" : "Chicken Cafeteria", "restaurant_id" : "41256856" },
+
+{"address" : { "building" : "1212", "coord" : [ -74., 40.767461 ], "street" : "East Hyderabad", "zipcode" : "1124658" }, "cuisine" : "Dum Briyani", "grades" : [ { "date" : new Date("2020-09-04"), "grade" : "A", "score" : 85 }, { "date" : new Date("2018-12-19"), "grade" : "B", "score" : 10 }, { "date" : new Date("2017-05-12"), "grade" : "A", "score" : 92 }, { "date" : new Date("2016-06-12"), "grade" : "A", "score" : 45 }, ], "name" : "Briyani Center", "restaurant_id" : "1146585" },
+
+{"address" : { "building" : "30", "coord" : [ -73.9653967, 40.6064339 ], "street" : "New Delhi East ", "zipcode" : "5900052" }, "cuisine" : "sauth Indian", "grades" : [ { "date" : new Date("2014-06-01"), "grade" : "A", "score" : 18 }, { "date" : new Date("2013-10-07"), "grade" : "A", "score" : 70 }, { "date" : new Date("2012-09-15"), "grade" : "A", "score" : 40 }, { "date" : new Date("2010-11-14"), "grade" : "A", "score" : 20 } ], "name" : " Fast Food Restaurant", "restaurant_id" : "30189457" },
+
+{"address" : { "building" : "800", "coord" : [ -75.98723045875074, 41.9658452 ], "street" : "old 55 Street", "zipcode" : "5901254" }, "cuisine" : "Indian", "grades" : [ { "date" : new Date("2011-04-13"), "grade" : "A", "score" : 50 }, { "date" : new Date("2012-10-20"), "grade" : "A", "score" : 85 }, { "date" : new Date("2013-08-11"), "grade" : "A", "score" : 70 }, { "date" : new Date("2010-3-18"), "grade" : "A", "score" : 25 } ], "name" : "street food", "restaurant_id" : "40188848" },
+
+{"address" : { "building" : "50", "coord" : [ -73.12154144852, 40.65784575 ], "street" : "Pune", "zipcode" : "136497" }, "cuisine" : "Missal Pav", "grades" : [ { "date" : new Date("2020-01-10"), "grade" : "A", "score" : 8 } ], "name" : "Puneri Tadakka", "restaurant_id" : "5900356" },
+
+])
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 1) Write a MongoDB query to display the fields restaurant_id, name, and zip code but exclude the field _id for all the documents in the collection restaurant./
+db.restaurent.find({},{"restaurant_id":1, "name":1,"address.zipcode":1, "_id":0})
+
+// 2) Write a MongoDB query to arrange the name of the restaurants in ascending order along with all the columns./
+db.restaurent.find().sort({"name":1})
+
+// 3) Write a MongoDB query to display the first 5 restaurant in ascending order of name field./
+db.restaurent.find().sort({"name":1}).limit(5)
+
+// 4) Write a MongoDB query to display the next 5 restaurants after skipping first 5./
+db.restaurent.find().skip(5).limit(5)
+
+
+// 5) Write a MongoDB query to find the restaurants who achieved a score more than 90./
+db.restaurent.find({grades : {$elemMatch : {"score" : {$gt : 90}}}});
+
+
+// 6) Write a MongoDB query to find the restaurants that achieved a score, more than 80 but less than 100/
+db.restaurent.find({grades : {$elemMatch : {"score" : {$gt : 80, $lt : 100}}}})
+
+
+
+// 7) Write a MongoDB query to find the restaurant name, longitude and latitude and cuisine for those restaurants which contain 'Caf' as first three letters of its name./
+db.restaurent.find({name : /^Caf/},{"name" : 1, "address.coord":1, "cuisine" : 1})
+
+
+// 8) Write a MongoDb query to update grade B to A in all documents./
+db.restaurent.updateMany({grades : {$elemMatch : {"grade" : "B"}}},{$set : { "grades.$.grade" : "A"}})
